@@ -1,0 +1,21 @@
+[data-bs-theme="dark"] {
+	#particles-js {
+		background-image: linear-gradient(0deg, #020a07, #081c15);
+	}
+
+	.dark-icon {
+		display: none !important;
+	}
+
+	.light-icon {
+		display: block !important;
+	}
+
+	.nav-menu a:hover {
+		color: #1fa84f !important;
+	}
+
+	.text-main {
+		color: black !important;
+	}
+}
