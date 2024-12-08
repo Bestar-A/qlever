@@ -4,6 +4,8 @@ const toggleTheme = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+	var carouselIdx = 0;
+
 	const particleBackElem = document.querySelector("#particle-js");
 	const height = parseFloat(window.getComputedStyle(document.querySelector("#main-div")).height);
 	const winHeight = window.innerHeight;
