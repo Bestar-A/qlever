@@ -3,6 +3,16 @@
 		background-image: linear-gradient(0deg, #020a07, #081c15);
 	}
 
+	::selection {
+		color: black !important;
+		background-color: #1fa84f !important;
+	}
+
+	::-moz-selection {
+		color: black !important;
+		background-color: #1fa84f !important;
+	}
+
 	.dark-icon {
 		display: none !important;
 	}
@@ -17,5 +27,65 @@
 
 	.text-main {
 		color: black !important;
+	}
+
+	.btn-special:hover {
+		color: white !important;
+		border-color: #1fa84f !important;
+	}
+
+	.btn-special:before {
+		background: linear-gradient(to right, #95d5b2, #52b788);
+		transform: translate(-50%, -50%);
+	}
+
+	.btn-special::after {
+		background-color: #081c15;
+		transition: all 0.3s ease;
+		height: 0;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	.btn-special:hover::after {
+		height: 130px;
+	}
+
+	.text-gradient {
+		background: linear-gradient(to right, #95d5b2, #52b788);
+		background-clip: text;
+		color: transparent;
+	}
+
+	.bg-gradient {
+		background: linear-gradient(to right, #95d5b2, #52b788);
+	}
+
+	.bg-tutorial-section,
+	.bg-pricing-section,
+	.bg-team-section {
+		background-image: linear-gradient(180deg, #020a07, #081c15);
+	}
+
+	.bg-contact-section,
+	.bg-feature-section,
+	.bg-services-section {
+		background-image: linear-gradient(0deg, #020a07, #081c15);
+	}
+
+	.bg-main-card {
+		/* background: linear-gradient(170deg, #081c15 70%, #1b4332); */
+		background: radial-gradient(circle at 150% 180%, #020a07, #081c15);
+	}
+
+	.shadow-card {
+		box-shadow: 0px 0px 4px 0.5px #52b788;
+	}
+
+	.bg-price-card {
+		background-image: linear-gradient(180deg, #1b4332, #081c15);
+	}
+
+	.bg-price-card-active {
+		background-image: linear-gradient(180deg, #30714c, #1b4332);
 	}
 }
