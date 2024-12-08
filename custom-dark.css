@@ -35,7 +35,8 @@
 	}
 
 	.btn-special:before {
-		background: linear-gradient(to right, #95d5b2, #52b788);
+		/* background: linear-gradient(to right, #95d5b2, #52b788); */
+		background-color: #1fa84f;
 		transform: translate(-50%, -50%);
 	}
 

@@ -52,6 +52,26 @@ canvas {
 	background-color: #1fa84f !important;
 }
 
+.cursor {
+	width: 3px;
+	height: 38px;
+	background-color: white;
+	animation: typing 0.8s infinite;
+	border-radius: 4px;
+}
+
+@keyframes typing {
+	0% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 .dark-icon {
 	display: block !important;
 }
@@ -115,7 +135,7 @@ canvas {
 }
 
 .btn-special:before {
-	background: linear-gradient(to right, #2d6a4f, #081c15);
+	/* background: linear-gradient(to right, #2d6a4f, #081c15); */
 	transform: translate(-50%, -50%);
 }
 
