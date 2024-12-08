@@ -259,6 +259,14 @@ canvas {
 	transition-delay: 1s;
 }
 
+.delay-1250 {
+	transition-delay: 1.25s;
+}
+
+.delay-1500 {
+	transition-delay: 1.5s;
+}
+
 .ease {
 	transition-timing-function: ease;
 }
@@ -317,4 +325,44 @@ canvas {
 
 .anim-scroll.anim-right.active {
 	transform: translateX(0px);
+}
+
+.anim-scroll.anim-scale {
+	transform: scale(0.4);
+}
+
+.anim-scroll.anim-scale.active {
+	transform: scale(1);
+}
+
+.anim-scroll.anim-rightxl {
+	transform: translateX(40px);
+}
+
+.anim-scroll.anim-rightxl.active {
+	transform: translateX(0px);
+}
+
+.anim-scroll.anim-leftxl {
+	transform: translateX(-40px);
+}
+
+.anim-scroll.anim-leftxl.active {
+	transform: translateX(0px);
+}
+
+.anim-scroll.anim-top-left {
+	transform: translate(35px, -35px);
+}
+
+.anim-scroll.anim-top-left.active {
+	transform: translate(0px, 0px);
+}
+
+.anim-scroll.anim-top-right {
+	transform: translate(-35px, -35px);
+}
+
+.anim-scroll.anim-top-right.active {
+	transform: translate(0px, 0px);
 }
