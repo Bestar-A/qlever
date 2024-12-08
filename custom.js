@@ -56,6 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
 				if (entry.isIntersecting) {
 					// Element is in the viewport
 					entry.target.classList.add("active");
+					// const videos = entry.target.querySelectorAll("video");
+					// if (videos.length > 0) {
+					// 	console.log(videos[carouselIdx]);
+					// 	videos[carouselIdx].setAttribute("autoplay", true);
+					// 	setTimeout(() => {
+					// 		videos[carouselIdx].play();
+					// 	}, 1000);
+					// }
 				} else {
 					// Element is out of the viewport (optional, if you want to remove the class)
 					// entry.target.classList.remove("active");
