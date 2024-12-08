@@ -64,8 +64,30 @@ canvas {
 	border-radius: 4px;
 }
 
+.btn-slider {
+	cursor: pointer;
+	background-color: transparent;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	opacity: 0.3;
+	transition: all 0.3s ease;
+}
+
+.btn-slider:hover {
+	opacity: 1;
+	background-color: #343434;
+}
+
 .slider {
-	background-color: #1fa84f;
+	background-color: #787878;
+}
+
+.slider.active {
+	background-color: #054a29;
 }
 
 @keyframes typing {
