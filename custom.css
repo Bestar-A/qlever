@@ -66,15 +66,21 @@ canvas {
 
 .btn-slider {
 	cursor: pointer;
-	background-color: transparent;
+	background-color: #343434;
 	width: 40px;
 	height: 40px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 100%;
-	opacity: 0.3;
+	opacity: 0.2;
+	backdrop-filter: blur(30px);
 	transition: all 0.3s ease;
+}
+
+.btn-slider.disable:hover {
+	opacity: 0.2;
+	background-color: #343434;
 }
 
 .btn-slider:hover {
