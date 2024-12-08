@@ -13,13 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
 			const data = JSON.parse(wrapper.getAttribute("data"));
 			const content = Object.values(data);
 
-			// Function to handle the typing and deleting effect
 			const typeAndDelete = (word, index = 0) => {
 				if (index <= word.length) {
 					wrapper.textContent = word.substring(0, index); // Type out the word
 					setTimeout(() => typeAndDelete(word, index + 1), 150); // Typing speed
 				} else {
-					// Pause before deleting
 					setTimeout(() => deleteWord(word, word.length), 3000);
 				}
 			};
@@ -29,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 					wrapper.textContent = word.substring(0, index); // Delete one character at a time
 					setTimeout(() => deleteWord(word, index - 1), 100); // Deletion speed
 				} else {
-					// Move to the next word after deleting
 					const nextIndex = (content.indexOf(word) + 1) % content.length;
 					setTimeout(() => {
 						typeAndDelete(content[nextIndex]);
@@ -37,10 +34,33 @@ document.addEventListener("DOMContentLoaded", () => {
 				}
 			};
 
-			// Start the animation with the first word
 			typeAndDelete(content[0]);
 		}
 	};
 
-	typing();
+	// Scroll Effect
+	const scrollEffect = () => {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					// Element is in the viewport
+					entry.target.classList.add("active");
+				} else {
+					// Element is out of the viewport (optional, if you want to remove the class)
+					// entry.target.classList.remove("active");
+				}
+			});
+		});
+
+		// Select all elements with the '.anim-scroll' class
+		const elements = document.querySelectorAll(".anim-scroll");
+		elements.forEach((element) => {
+			observer.observe(element); // Start observing each element
+		});
+	};
+
+	// Call the scroll effect function
+	scrollEffect();
+
+	setTimeout(typing, 1500);
 });
