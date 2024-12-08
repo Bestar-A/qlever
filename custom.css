@@ -391,6 +391,22 @@ canvas {
 	transform: translateX(0px);
 }
 
+.anim-scroll.anim-rightxl-scale {
+	transform: translateX(40%) scale(0.5);
+}
+
+.anim-scroll.anim-rightxl-scale.active {
+	transform: translateX(0px) scale(1);
+}
+
+.anim-scroll.anim-leftxl-scale {
+	transform: translateX(-40%) scale(0.5);
+}
+
+.anim-scroll.anim-leftxl-scale.active {
+	transform: translateX(0px) scale(1);
+}
+
 .anim-scroll.anim-leftxl {
 	transform: translateX(-40px);
 }
@@ -413,4 +429,26 @@ canvas {
 
 .anim-scroll.anim-top-right.active {
 	transform: translate(0px, 0px);
+}
+
+.avatar-div {
+	position: relative;
+}
+
+.avatar-div:after {
+	transition: all 0.2s ease;
+	background-color: transparent;
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.staff-div.inactive .avatar-div:after {
+	background-color: #cccccc78;
+	backdrop-filter: blur(2px);
 }

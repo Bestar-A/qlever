@@ -78,6 +78,32 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	};
 
+	// Staff Avatar Effect
+	const blueEffect = (target) => {
+		const divs = document.querySelectorAll(".staff-div");
+
+		divs.forEach((div) => {
+			div.addEventListener("mouseover", () => {
+				// Add 'active' to this div and 'inactive' to others
+				div.classList.add("active");
+				divs.forEach((otherDiv) => {
+					if (otherDiv !== div) {
+						otherDiv.classList.add("inactive");
+					}
+				});
+			});
+
+			div.addEventListener("mouseout", () => {
+				// Remove 'active' from this div and 'inactive' from all
+				div.classList.remove("active");
+				divs.forEach((otherDiv) => {
+					otherDiv.classList.remove("inactive");
+				});
+			});
+		});
+	};
+
+	blueEffect();
 	// Call the scroll effect function
 	scrollEffect();
 
