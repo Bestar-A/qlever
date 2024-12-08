@@ -4,6 +4,15 @@ const toggleTheme = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+	const particleBackElem = document.querySelector("#particle-js");
+	const height = parseFloat(window.getComputedStyle(document.querySelector("#main-div")).height);
+	const winHeight = window.innerHeight;
+	const setHeight = Math.max(height, winHeight);
+
+	console.log(winHeight, height, setHeight);
+	if (particleBackElem) {
+		particleBackElem.style.height = setHeight + "px";
+	}
 	// Typing Effect
 	const typing = () => {
 		const elements = document.getElementsByClassName("anim-type");

@@ -36,7 +36,7 @@
 					<a href="#contact">Contact</a>
 				</div>
 				<div class="d-flex gap-4 align-items-center">
-					<button class="fs-5 rounded-pill px-4 text-main py-3 btn-special shadow-main-sm">Get Started</button>
+					<button class="fs-5 rounded-pill px-4 py-3 btn-special shadow-main-sm">Get Started</button>
 					<button class="border-primary border rounded-pill d-flex justify-content-center align-items-center" onclick="toggleTheme();" style="width: 40px; height: 40px">
 						<i class="fa-solid fa-moon text-black-50 dark-icon"></i>
 						<i class="fa-regular fa-sun text-white light-icon"></i>
@@ -47,7 +47,7 @@
 		<!-- Main Section -->
 		<main style="max-width: 1320px; top: 70px" class="mx-auto position-relative">
 			<!-- Home Section -->
-			<div class="d-flex align-items-center position-absolute">
+			<div class="d-flex align-items-center position-absolute flex-column-reverse flex-lg-row" id="main-div">
 				<div class="d-flex flex-column gap-2 pe-5 anim-scroll anim-left anim-opacity duration-800 delay-300 ease-in-out">
 					<h1 class="fw-bold"><span class="text-gradient">QLever</span> Is A New</h1>
 					<h2 class="my-1 px-3 py-3 me-auto rounded-3 text-white bg-primary shadow-main">
@@ -61,7 +61,7 @@
 						QLeverize is a powerful open-source graph database and RDF triplestore that allows you to load and query hundreds of billions of facts on a single commodity machine, delivering
 						unprecedented performance.
 					</p>
-					<button class="fs-5 rounded-pill px-4 text-main py-3 btn-special me-auto mt-5 shadow-main-sm">Get Started</button>
+					<button class="fs-5 rounded-pill px-4 py-3 btn-special me-auto mt-5 shadow-main-sm">Get Started</button>
 				</div>
 				<img src="./assets/intro_back.png" alt="#" width="967" height="750" style="width: 53%; height: auto" class="anim-scroll anim-right anim-opacity duration-800 delay-300 ease-in-out" />
 			</div>
@@ -71,8 +71,30 @@
 			<!-- About Us Section -->
 			<section id="aboutus" class="bg-tutorial-section">
 				<div class="mx-auto row" style="max-width: 1320px">
-					<div class="mb-5 rounded-5 border bg-gradient col-7 d-flex justify-content-center align-items-center anim-scroll anim-opacity anim-upxl duration-800" style="height: 400px">
-						<h1 class="text-secondary">Demo Video</h1>
+					<div
+						class="carousel-wrapper mb-5 rounded-5 position-relative border bg-gradient col-7 p-0 d-flex align-items-center anim-scroll anim-opacity anim-upxl duration-800 overflow-x-hidden"
+						style="height: 400px"
+					>
+						<div class="col-12 h-100 rounded-5 px-0 d-flex" id="first-video">
+							<h1 class="text-secondary m-auto">Demo Video1</h1>
+						</div>
+						<div class="col-12 h-100 rounded-5 px-0 d-flex" id="second-video">
+							<h1 class="text-secondary m-auto">Demo Video2</h1>
+						</div>
+						<div class="col-12 h-100 rounded-5 px-0 d-flex" id="third-video">
+							<h1 class="text-secondary m-auto">Demo Video3</h1>
+						</div>
+						<div class="position-absolute translate-middle-x d-flex gap-3" style="bottom: 20px; left: 50%">
+							<div style="width: 25px; height: 4px" class="rounded-3 slider"></div>
+							<div style="width: 25px; height: 4px" class="rounded-3 slider"></div>
+							<div style="width: 25px; height: 4px" class="rounded-3 slider"></div>
+						</div>
+						<div class="position-absolute translate-middle-y btn-slider" style="top: 50%; left: 40px">
+							<i class="fa-solid fa-chevron-left"></i>
+						</div>
+						<div class="position-absolute translate-middle-y btn-slider" style="top: 50%; right: 40px">
+							<i class="fa-solid fa-chevron-right"></i>
+						</div>
 					</div>
 					<div class="col-5 ps-6 pe-5 d-flex flex-column anim-scroll anim-opacity duration-1000 delay-400 anim-upxl">
 						<h1 class="mb-5">About <span class="text-gradient">QLever</span></h1>
@@ -493,7 +515,7 @@
 		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 		<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
 		<script src="./bootstrap.min.js"></script>
-		<script src="./particle.js"></script>
 		<script src="./custom.js"></script>
+		<script src="./particle.js"></script>
 	</body>
 </html>
